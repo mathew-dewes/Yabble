@@ -143,6 +143,35 @@ export const Navbar = () => {
           </div>
         </div>
       )}
+
+        {/* Mobile Auth Signin */}
+       <div className="md:hidden items-center px-4 py-5">
+            {user ? (
+              <div className="flex items-center space-x-4">
+                {user.user_metadata?.avatar_url && (
+                  <img
+                    src={user.user_metadata.avatar_url}
+                    alt="User Avatar"
+                    className="w-8 h-8 rounded-full object-cover"
+                  />
+                )}
+                <span className="text-gray-300">{displayName}</span>
+                <button
+                  onClick={signOut}
+                  className="bg-red-500 px-3 py-1 rounded cursor-pointer"
+                >
+                  Sign Out
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={signInWithGitHub}
+                className="bg-blue-500 px-3 py-1 rounded cursor-pointer"
+              >
+                Sign in with GitHub
+              </button>
+            )}
+          </div>
     </nav>
   );
 };

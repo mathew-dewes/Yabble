@@ -7,7 +7,7 @@ import { PostDetail } from "../components/PostDetail";
 export const PostPage = () => {
     const {id} = useParams<{id: string}>()
   return (
-    <div className="pt-5 sm:pt-10">
+    <div className="pt-20 sm:pt-10">
      <PostDetail postId={Number(id)}/>
     </div>
   );
