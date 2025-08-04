@@ -145,7 +145,7 @@ export const Navbar = () => {
       )}
 
         {/* Mobile Auth Signin */}
-       <div className="md:hidden items-center px-4 py-5">
+       <div className="md:hidden items-center px-4 pb-5">
             {user ? (
               <div className="flex items-center space-x-4">
                 {user.user_metadata?.avatar_url && (
